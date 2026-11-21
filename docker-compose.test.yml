@@ -1,0 +1,24 @@
+services:
+  postgres_test:
+    image: postgres:17-alpine
+    container_name: foodstarter_postgres_test
+
+    environment:
+      POSTGRES_DB: foodstarter_test
+      POSTGRES_USER: postgres
+      # Throwaway password for the in-memory test database only.
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5433:5432"
+
+    # In-memory data: fast, and wiped whenever the container stops.
+    tmpfs:
+      - /var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
