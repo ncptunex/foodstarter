@@ -1,5 +1,7 @@
 # Foodstarter
 
+https://foodstarter.vercel.app/
+
 Foodstarter is a food tracking app. You log what you eat, with a meal type, calories and optional macros, and see every entry in one list, newest first.
 
 Built with TanStack Start (React 19, file-based routing) on Vite and Nitro, Tailwind CSS v4, Drizzle ORM with PostgreSQL, and Zod for validation. Package manager is pnpm. Lint and format use Biome.
@@ -145,3 +147,8 @@ Work done so far:
 - Added a seed script and a separate test database.
 
 Not built yet: editing an existing entry.
+
+<img width="1312" height="860" alt="image" src="https://github.com/user-attachments/assets/61cbf1c7-1eee-40d4-8ede-c93b4e4655e4" />
+<img width="1153" height="901" alt="image" src="https://github.com/user-attachments/assets/296a26f9-500d-4909-9853-9aaa7d0cb054" />
+
+
